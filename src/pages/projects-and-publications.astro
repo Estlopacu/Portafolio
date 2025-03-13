@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { TechStack } from "@libs/ui/blocks/TechStack";
+---
+
+<Layout
+  title="Luis Esteban López Acuña - Portfolio Home"
+  description="Home Page"
+>
+  <main class="bg-secondary">
+    <section class="about">
+      <div
+        class="min-h-[70vh] flex flex-col items-center justify-center px-4 bg-secondary"
+      >
+        <TechStack
+          technologies={[
+            {
+              name: "Astro",
+              description:
+                "Modern Static Site Generator with partial hydration",
+              link: "https://astro.build/",
+              benefits: [
+                "Zero-JS by default for better performance",
+                "Partial hydration for interactive components",
+                "Built-in image optimization",
+                "Automatic sitemap generation",
+              ],
+            },
+            {
+              name: "React",
+              description: "Component-Based UI library",
+              link: "https://reactjs.org/",
+              benefits: [
+                "Component-driven development",
+                "Rich ecosystem of libraries",
+                "Strong community support",
+                "Reusable UI components",
+              ],
+            },
+            {
+              name: "Tailwind CSS",
+              description: "Utility-First CSS Framework",
+              link: "https://tailwindcss.com/",
+              benefits: [
+                "Rapid UI development",
+                "No CSS file maintenance",
+                "Consistent design system",
+                "Built-in responsive design",
+              ],
+            },
+            {
+              name: "Lucide React",
+              description: "Beautiful & consistent icons",
+              link: "https://lucide.dev/",
+              benefits: [
+                "Lightweight SVG icons",
+                "Tree-shakeable imports",
+                "Consistent design language",
+                "TypeScript support",
+              ],
+            },
+            {
+              name: "TypeScript",
+              description: "Type Safety & Enhanced Developer Experience",
+              link: "https://www.typescriptlang.org/",
+              benefits: [
+                "Type safety across the project",
+                "Better IDE support",
+                "Reduced runtime errors",
+                "Enhanced code maintainability",
+              ],
+            },
+          ]}
+          client:visible
+        />
+      </div>
+    </section>
+  </main>
+</Layout>

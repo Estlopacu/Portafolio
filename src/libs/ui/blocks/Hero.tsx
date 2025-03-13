@@ -1,36 +1,21 @@
 import { type FC } from "react";
 import { ArrowRight } from "lucide-react";
 
-type HeroProps = {
-    title: string;
-    description: string;
-};
-
-export const Hero: FC<HeroProps> = ({ title, description }) => {
-    return (
-        <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 bg-secondary">
-            <h1 className="text-h1-md md:text-h1 font-bold text-primary mb-6">
-                {title}
-            </h1>
-            <p className="text-p-md md:text-p max-w-2xl text-primary/80 mb-8">
-                {description}
-            </p>
-            <div className="flex gap-4">
-                <a
-                    href="#features"
-                    className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary px-6 py-3 rounded-lg transition-all"
-                >
-                    Explore Features <ArrowRight size={20} />
-                </a>
-                <a
-                    href="https://github.com/codexcodethemes/astro-starter"
-                    className="flex items-center gap-2 bg-primary text-secondary px-6 py-3 rounded-lg hover:opacity-90 transition-all"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Get Started
-                </a>
-            </div>
-        </div>
-    );
+export const Hero: FC = () => {
+  return (
+    <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 bg-secondary">
+      <h1 className="text-h1-md md:text-h1 font-bold text-primary mb-6">
+        <span className="animate-[bounce_0.5s_ease-in-out_1] delay-[700ms]">
+          Luis Esteban López Acuña
+        </span>{" "}
+        is a software engineer based on <span>Berlin, Germany 🇩🇪</span> from{" "}
+        <span>San José, Costa Rica 🇨🇷</span>
+      </h1>
+      <div className="flex items-center space-x-2">
+        <p className="text-primary/80 text-center max-w-2xl mx-auto mb-16">
+          Social Media
+        </p>
+      </div>
+    </div>
+  );
 };
